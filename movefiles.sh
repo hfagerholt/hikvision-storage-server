@@ -12,7 +12,7 @@ mkdir $snapshotDir$DATE
 mv $snapshotDir${DATE}* $snapshotDir$DATE
 
 
-
+#make timelapse from yesterdays images
 find $snapshotDir -name "*.jpg" -size -1k -delete
 ffmpeg -framerate $timelapse_fps -pattern_type glob -i $snapshotDir${DATE}'/*.jpg' -b:v $timelapse_bitrate -c:v $timelapse_codec $snapshotDir${DATE}/${DATE}.mp4
 
