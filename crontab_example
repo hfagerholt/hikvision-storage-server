@@ -1,6 +1,5 @@
 # m h  dom mon dow   command
 * * * * * bash /home/camera0/pic_dl.sh >/dev/null 2>&1
-15 0 * * * bash /home/camera0/movefiles.sh >/dev/null 2>&1
-30 0 * * * bash /home/camera0/deletefiles.sh >/dev/null 2>&1
+20 0 * * * bash /home/camera0/end_of_day.sh >/dev/null 2>&1
 
 @reboot screen -dmS main bash /home/camera0/camera0.sh
